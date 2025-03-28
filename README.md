@@ -51,7 +51,7 @@ ls -lh → Human-readable sizes (K, M, G)
 ls -la → Show hidden files (.files)
 This lists all files, including hidden files (files that start with a dot .)
 
-Example Output
+**Example Output**
 
 .  ..  .bashrc  .profile  .ssh  Documents  Downloads  script.sh
 
@@ -61,7 +61,7 @@ Example Output
 
 .bashrc, .profile, .ssh → Hidden files (usually configuration files)
 
-$ ls‐a
+**$ ls‐a**
 . .. .bash_history .bash_logout .bash_profile
 .bashrc .kshrc .mozilla .viminfo
 
@@ -119,33 +119,40 @@ Confirm whether FASTQ file is downloaded or not by using:
 **$ ls ‐lh**
 
 **File Compression**
-‘gzip’ command is used to compress as well as uncompress/decompress
-all the files with .gz file extension.
+
+‘gzip’ command is used to compress as well as uncompress/decompress all the files with .gz file extension.
 
 To uncompress SRR2079545.fastq.gz, type:
-$ gzip ‐d SRR2079545.fastq.gz
+
+**$ gzip ‐d SRR2079545.fastq.gz**
 
 **fastq.gz is a compressed format having .gz as an extension**
 
 Similarly, you can compress the SRR2079545.fastq file using the ‘gzip’ command as follows:
+
 **$gzip SRR2079545.fastq**
 
 
 https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR098026
 
 The ‘cat’ command which stands for concatenate is used to display the contents of a file. To display the contents of SRR2079545.fastq file, type:
+
 **$ cat SRR2079545.fastq**
 
 This command will display contents of your FASTQ file on the terminal. However, in larger files such as FASTQ, most of the output will scroll up the screen with only the last part that can be accessed on the terminal.
 
 Other handy commands to quickly check the contents of bigger files are ‘head’ and ‘tail’ commands.
+
 **$ head SRR2079545.fastq**
+
 This will display the first 10 (the default number) lines from the file.
 
 To print the first 15 lines, type:
+
 **$ head -15 SRR2079545.fastq**
 
 Similarly, to print the last 10 and last 15 lines of a file, use:
+
 **$ tail SRR2079545.fastq
 $ tail ‐15 SRR2079545.fastq**
 
