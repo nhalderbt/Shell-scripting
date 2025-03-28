@@ -102,12 +102,53 @@ Verify file creation using ls:
 
 **$ ls -l lesson.txt**
 
-**sudo apt-get install wget -y** is used to install the wget package on a Debian-based Linux system (like Ubuntu). 
-The ‘wget’ commandi is used to download files from your Linux terminal provided you already have web link of that file. By using ‘wget’ we can also download FASTQ files from the public databases by providing the exact URL of the
-file.
+**sudo apt-get install wget -y** is used to install the wget package on a Debian-based Linux system (like Ubuntu).
 
 ![image](https://github.com/user-attachments/assets/929fcd21-1430-4cdf-a3a1-294b05e0a9cf)
 
+The ‘wget’ command is used to download files from your Linux terminal provided you already have web link of that file. By using ‘wget’ we can also download FASTQ files from the public databases by providing the exact URL of the file.
+
+For instance, let’s download a FASTQ file from https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR098026
+
+**wget https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR098026**
+
+![image](https://github.com/user-attachments/assets/358bfef5-d9d0-43ac-b974-b883814238c2)
+
+
+Confirm whether FASTQ file is downloaded or not by using:
+**$ ls ‐lh**
+
+**File Compression**
+‘gzip’ command is used to compress as well as uncompress/decompress
+all the files with .gz file extension.
+
+To uncompress SRR2079545.fastq.gz, type:
+$ gzip ‐d SRR2079545.fastq.gz
+
+**fastq.gz is a compressed format having .gz as an extension**
+
+Similarly, you can compress the SRR2079545.fastq file using the ‘gzip’ command as follows:
+**$gzip SRR2079545.fastq**
+
 
 https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR098026
+
+The ‘cat’ command which stands for concatenate is used to display the contents of a file. To display the contents of SRR2079545.fastq file, type:
+**$ cat SRR2079545.fastq**
+
+This command will display contents of your FASTQ file on the terminal. However, in larger files such as FASTQ, most of the output will scroll up the screen with only the last part that can be accessed on the terminal.
+
+Other handy commands to quickly check the contents of bigger files are ‘head’ and ‘tail’ commands.
+**$ head SRR2079545.fastq**
+This will display the first 10 (the default number) lines from the file.
+
+To print the first 15 lines, type:
+**$ head -15 SRR2079545.fastq**
+
+Similarly, to print the last 10 and last 15 lines of a file, use:
+**$ tail SRR2079545.fastq
+$ tail ‐15 SRR2079545.fastq**
+
+
+
 
