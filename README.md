@@ -153,9 +153,29 @@ To print the first 15 lines, type:
 
 Similarly, to print the last 10 and last 15 lines of a file, use:
 
-**$ tail SRR2079545.fastq
-$ tail ‐15 SRR2079545.fastq**
+**$ tail SRR2079545.fastq**
 
+**$ tail ‐15 SRR2079545.fastq**
+
+**Count the Number of Lines**
+
+The ‘wc’- word count command is used to count the number of lines in a file. To count the number of lines in a FASTQ file, type:
+
+**$ wc ‐l SRR2079545.fastq**
+
+**Search a Pattern**
+
+The ‘grep’ command is used to search patterns in an input file. When ‘grep’ finds a pattern match in a line, it prints the line to standard output. For example, to find a string of nucleotides “CCCCCTTAAAAA” in FASTQ file, type the following command:
+
+**$ grep “CCCCCTTAAAAA” SRR2079545.fastq**
+
+All lines containing the nucleotide string “CCCCCTTAAAAA” are printed. However, this does not print the identifier for each sequence.
+
+**Combine Multiple Commands Together**
+
+The pipes denoted by ‘|’ are used to connect multiple commands together. By means of pipes, the standard output of one command is redirected as the standard input for another command.
+
+**$ grep “@ERR000001” ERR000001_1.fastq | wc -l**
 
 
 
